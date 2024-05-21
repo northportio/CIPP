@@ -3,21 +3,9 @@ rules:
   - base: main
     upstream: KelvinTegelaar:main
     mergeMethod: merge
-    assignees:
-      - northportio
-    reviewers:
-      - northportio
   - base: dev
     upstream: KelvinTegelaar:dev
     mergeMethod: none
-    assignees:
-      - northportio
-    reviewers:
-      - northportio
   - base: website
     upstream: KelvinTegelaar:website
     mergeMethod: merge
-    assignees:
-      - northportio
-    reviewers:
-      - northportio
