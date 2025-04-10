@@ -26,6 +26,9 @@ export const CippTenantSelector = (props) => {
     url: "/api/listTenants",
     data: { AllTenantSelector: true },
     queryKey: "TenantSelector",
+    refetchOnMount: false,
+    refetchOnReconnect: false,
+    keepPreviousData: true,
   });
 
   const [currentTenant, setSelectedTenant] = useState(null);
@@ -63,7 +66,7 @@ export const CippTenantSelector = (props) => {
   }, [currentTenant?.value]);
 
   useEffect(() => {
-    if (tenant && currentTenant?.value) {
+    if (tenant && currentTenant?.value && currentTenant?.value !== 'AllTenants') {
       tenantDetails.refetch();
     }
   }, [tenant, offcanvasVisible]);
